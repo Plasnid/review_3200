@@ -159,3 +159,10 @@ console.log(profSocks[profSocks.length-1]); //* now gives us profSocks[8] which 
 for(let i=0;i<profSocks.length;i++){
     console.log(profSocks[i]);
 };
+
+/**
+ * * Here are a couple of other loops!
+ * * Here is a for loop with forEach, that takes in a function as it's parameter!
+ */
+
+profSocks.forEach(socks => console.log(`I am wearing ${socks} socks today!`));
