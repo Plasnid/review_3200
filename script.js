@@ -113,3 +113,38 @@ console.log(typeof(flamingoesAreCanadian));
 let bestClassIsProgramming = true;
 console.log(bestClassIsProgramming);
 console.log(typeof(bestClassIsProgramming));
+
+/**
+ * * Now to get to the really fun one, Array
+ * * An array is a numbered list of things
+ * * An array can hold any other datatype, even another array
+ * * Arrays count from 0 instead of 1
+ * 
+ * * When I get ready in the mornings, the room is dark
+ * * Fortunately, I have a variety of fun socks, but I can't see them in the dark
+ * * Lets make an array of all the socks styles
+ * 
+ * * [] is how we start a blank array.
+ * * We can use push, to push values into an array .push is a method all arrays have
+ * * Lets start our array with things in it, then we can push some extra items into it
+ * * We are making an array of strings, each string describes the pattern of the socks
+ */
+
+let profSocks = ["skulls", "unicorns", "pizza", "plaid", "tiger stripes", "elves", "taco", "pirate gold"];
+
+/**
+ * * I could go on, but that is a nice selection of styles
+ * * So lets find out a few things!
+ * * We can find the length of the array with .length
+ */
+console.log(profSocks.length); // * yep 8 pairs of socks!
+
+/**
+ * * Since arrays start counting at 0, the last item in the array is the length -1
+ * * Lets find the first element and the last element
+ */
+
+console.log(profSocks[0]) // *The first pair of socks should be skulls! Check in the browser
+console.log(profSocks[profSocks.length-1]); //* so this will give us profSocks[7] in this case which should be "pirate gold"...go check!
+
+
