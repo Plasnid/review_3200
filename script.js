@@ -17,6 +17,9 @@ console.log("I'm so glad to be back");
  * * They are block scoped, which means that any pair of {}
  * * will contain them!  They remain contently inside of functions
  * * loops, or any other use of braces!  Yaaay!
+ * 
+ *  * If you define a variable with let, you can change the value after you declare it
+ *  * If you use const, once you set it, it stays set.  Const means constant!
  */
 
 /**
@@ -34,6 +37,10 @@ console.log("I'm so glad to be back");
  * * kabob case: student-name
  * *
  * * For the purposes of our work in class, and for assignments please use camel case
+ * * If you start a variable name with a letter, always make it start with lower case
+ * 
+ * * We use upperCase starting letters for classes only!  What is a class?  
+ * * Explanation of classes coming later this semester!
  */
 
 /**  
@@ -75,4 +82,34 @@ console.log(studentsFavourite);
 /**
  * * What about numbers?  Lets look at those now.
  * * Numbers NEVER have quotes, because a number in quotes is a string
+ * *
+ * * typeof() is a function in JavaScript for finding out datatypes
+ * * It isn't perfect, but in this case, it is very helpful!
  */
+let notANumber = "9";
+console.log(typeof(notANumber));
+let actuallyANumber = 9;
+console.log(typeof(actuallyANumber));
+
+/**
+ * * So far we have strings and numbers.  Lets move on to Booleans
+ * * Booleans can either be true or false
+ * 
+ * * Lets try out an example, by checking if flamingoes are native to canada
+ * * Sadly they are not, so we have to say false...a good variable name...let see
+ * * How about flamingoesAreCanadian?  That works, and it is camel case :D
+ */
+
+let flamingoesAreCanadian = false;
+console.log(flamingoesAreCanadian);
+console.log(typeof(flamingoesAreCanadian));
+
+/**
+ * * That worked well, lets try another!
+ * * Programming is the best class
+ * * A good variable name for this is bestClassIsProgramming
+ */
+
+let bestClassIsProgramming = true;
+console.log(bestClassIsProgramming);
+console.log(typeof(bestClassIsProgramming));
