@@ -147,4 +147,15 @@ console.log(profSocks.length); // * yep 8 pairs of socks!
 console.log(profSocks[0]) // *The first pair of socks should be skulls! Check in the browser
 console.log(profSocks[profSocks.length-1]); //* so this will give us profSocks[7] in this case which should be "pirate gold"...go check!
 
+// *lets use push to add the surf board socks!
+profSocks.push("Surf Boards");
+console.log(profSocks.length);
+console.log(profSocks[profSocks.length-1]); //* now gives us profSocks[8] which is "surf boards"...go check!
 
+
+/**
+ * *We can also loop through the array!  Lets try a for loop!
+ */
+for(let i=0;i<profSocks.length;i++){
+    console.log(profSocks[i]);
+};
