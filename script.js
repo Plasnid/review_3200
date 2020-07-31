@@ -154,9 +154,26 @@ console.log(profSocks[profSocks.length-1]); //* now gives us profSocks[8] which 
 
 
 /**
- * *We can also loop through the array!  Lets try a for loop!
+ * * We can also loop through the array!  Lets try a for loop!
+ * * What does each part mean?
+ * *
+ * * let i=0; tells us that we are going to count from 0
+ * * i<profSocks.length; tells us that "i" the loop only works when i is less than the length of the array
+ * * i++ tells us that the number will increase after each loop
+ * *
  */
 for(let i=0;i<profSocks.length;i++){
+    console.log(profSocks[i]);
+};
+
+/**
+ * * Alright, so that was forwards, what about backwards?
+ * * Remember doing this?
+ * * Think about the differences between forwards and backwards, what is different?  Why?
+ */
+
+console.log("lets loop backwards!");
+for(let i=profSocks.length-1;i>=0;i--){
     console.log(profSocks[i]);
 };
 
@@ -166,3 +183,8 @@ for(let i=0;i<profSocks.length;i++){
  */
 
 profSocks.forEach(socks => console.log(`I am wearing ${socks} socks today!`));
+
+/**
+ * * Arrays are awesome!  They have all sorts of amazing built in functionality, like forEach!
+ * * ForEach is great. It is
+ */
