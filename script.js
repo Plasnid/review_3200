@@ -184,7 +184,26 @@ for(let i=profSocks.length-1;i>=0;i--){
 
 profSocks.forEach(socks => console.log(`I am wearing ${socks} socks today!`));
 
+/** 
+ * * More on functions and arrays later though as we have one more datatype to cover
+ * * Objects!
+ */
+
+
+
 /**
  * * Arrays are awesome!  They have all sorts of amazing built in functionality, like forEach!
- * * ForEach is great. It is
+ * * ForEach is great. It takes in a function... what is a function again? Lets take a look!
+ */
+
+/**
+ * * Functions: Give your actions a name!
+ * * Function let us take all the steps involved in doing something and group them with a name
+ * * We already do this.  For example, when someone asks you to take a step:
+ * * lift leg off of ground, bend knee on raised leg, lean forward, straighten knee, etc.....
+ * *
+ * * So many small pieces to one little action! We just named it, "take a step"
+ * * We give it a leg and a direction and we don't even think about it...our minds are incredible!
+ * 
+ * * Last semester 
  */
