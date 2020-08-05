@@ -66,3 +66,32 @@ sandwich.isSentient();
  * * Arrays and Objects are awesome!  They have all sorts of amazing built in functionality, like forEach!
  * * ForEach is great. It takes in a function... what is a function again? Lets take a look!
  */
+
+/**
+ * ! We looped through our array.  Can we loop through objects too?
+ * * Yes we can!  We can use a for of loop.  Lets try one out
+ * * source: https://zellwk.com/blog/looping-through-js-objects/
+*/
+for(let property in sandwich){
+    console.log(property); //* this will give you a list of the properties of an object
+    //! We can also checkout properties and their values...aka.  keys and their values
+    //* A key is a label we give to a property, eg. height is a label for how tall someone is
+    //* Bread is a label describing the outside of our sandwich
+    console.log(`${property}: ${sandwich[property]}`);
+}
+// ! Lets try this again in a different way, where we get keys and values
+for(let property in sandwich){
+    //! We can also checkout properties and their values...aka.  keys and their values
+    //* A key is a label we give to a property, eg. height is a label for how tall someone is
+    //* Bread is a label describing the outside of our sandwich
+    console.log(`${property}: ${sandwich[property]}`);
+}
+
+//* but there is more, we can get just the keys with Object.keys(objectName)
+console.log(Object.keys(sandwich));
+//* or just the values with Object.values(objectName);
+console.log(Object.values(sandwich));
+//* or all the entries with Object.entries(objectName);
+console.log(Object.entries(sandwich));
+
+// *lets have a little look at functions now!
