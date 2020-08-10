@@ -74,7 +74,22 @@ for(let i=profSocks.length-1;i>=0;i--){
 
 profSocks.forEach(socks => console.log(`I am wearing ${socks} socks today!`));
 
-// * this is only the tip of the iceberg though!
-// * Check out this page for examples of some great built in array functionality!
-// * https://www.abhishekdeshmukh.com/blog/javascript-array-methods
-// * Do they seem a little similar to string functionality.....what are the chances ;)
+/** 
+ * ! this is only the tip of the iceberg though!
+ * ! There are some I'd like you to pay close attention to:
+ * * Map - runs a function against every element in the array
+ * * Filter - returns an array filtered to just what you are looking for
+ * * Every - returns true if what you are filtering on is true in every entry
+ * * Some - returns true if what you are filtering on exists at least once
+ * * Sort - sorts your array in ascending or descending order
+ * * Slice - returns an array with a slice of your larger array
+ * * Splice - can add, remove, or replace elements from your array
+ * * Pop - removes and returns the last element of the array
+ * * Push - adds elements to the end of the array and returns the new length
+ * * Shift - removes and returns the first element of the array
+ * * Unshift - adds elements to the beginning of the array and returns the new length
+ * 
+ * * Check out this page for examples of some great built in array functionality!
+ * * https://www.abhishekdeshmukh.com/blog/javascript-array-methods
+ * * Do they seem a little similar to string functionality.....what are the chances ;)
+ */
