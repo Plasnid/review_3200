@@ -77,19 +77,99 @@ profSocks.forEach(socks => console.log(`I am wearing ${socks} socks today!`));
 /** 
  * ! this is only the tip of the iceberg though!
  * ! There are some I'd like you to pay close attention to:
+ * * Pop - removes and returns the last element of the array
+ * * Shift - removes and returns the first element of the array
+ * * Push - adds elements to the end of the array and returns the new length
+ * * Unshift - adds elements to the beginning of the array and returns the new length
+ * 
+ * * Sort - sorts your array in ascending or descending order
+ * * Slice - returns an array with a slice of your larger array
+ * * Splice - can add, remove, or replace elements from your array
+ * 
  * * Map - runs a function against every element in the array
  * * Filter - returns an array filtered to just what you are looking for
  * * Every - returns true if what you are filtering on is true in every entry
  * * Some - returns true if what you are filtering on exists at least once
- * * Sort - sorts your array in ascending or descending order
- * * Slice - returns an array with a slice of your larger array
- * * Splice - can add, remove, or replace elements from your array
- * * Pop - removes and returns the last element of the array
- * * Push - adds elements to the end of the array and returns the new length
- * * Shift - removes and returns the first element of the array
- * * Unshift - adds elements to the beginning of the array and returns the new length
  * 
- * * Check out this page for examples of some great built in array functionality!
+ * ! Now some examples:
+ * * We'll start by putting together an array of animals!
+ * * Please note that the last element of the array does not end with a comma(,)
+ */
+
+let animals = [
+    "alicorn",
+    "aardvard",
+    "seal",
+    "grizzly bear",
+    "water bear",
+    "alligator",
+    "sealion",
+    "orca",
+    "mugwump"
+];
+
+// ! Lets start with pop and shift
+// * pop removes and returns the last element of the array
+// * the last element of the array is "mugwump"...that is not a real animal!  Lets remove it
+console.log(animals);
+let lastAnimal = animals.pop();
+console.log(animals);
+console.log(lastAnimal);
+
+// * looks better, but there is still a problem!  Alicorns, while cool(winged unicorn), don't exist!
+let firstAnimal  = animals.shift();
+console.log(animals);
+console.log(firstAnimal);
+
+// ! Thats great for removing entries, what about adding?  Lets add some real animals!
+// * For this we will use push and unshift
+// * push adds entries to the end of the array, unshift adds entries to the start of the array
+animals.push("elephant", "albatros"); // * I chose to add 2 to the end of the array, but you can add any number!
+console.log(animals);
+
+// * now lets add entries to the begginning of the list
+animals.unshift("blue whale","great white shark");
+console.log(animals);
+
+// * now we have a list I like, lets sort the list!
+console.log(animals.sort());
+// * with numbers this can get a little messier
+let luckyNumbers = [100,9,72,13,27,3000];
+console.log(luckyNumbers.sort());
+// * That just doesn't look right...  how do we fix this?
+console.log(luckyNumbers.sort((a, b) => { return a - b }));
+//* much better...but what if we wanted descending numbers?...lets switch the b and a!
+console.log(luckyNumbers.sort((a, b) => { return b - a }));
+
+// ! Slice and Splice
+// * In this next section we'll look at slice and splice
+// * lets start with slice.
+// * slice(startIndex, endIndex). If you leave out the end index, it will go right to the end of the array
+// * I would like only the great white shark and the grizzly bear.  Our array has been sorted so lets see
+// * where they are. They appear to be entries 5 and 6, so that means I need to end on 7.
+// * I want slice to grab 5 and 6, but stop at 7
+console.log(animals);
+// * getting just the shark and the grizzly bear
+// * we are getting back a slice of the array
+let carnivoresToday = animals.slice(5,7);
+console.log(carnivoresToday);
+//* what does our animals array look like now?
+console.log(animals); 
+//*notice the shark and the bear are still in our original array, but we now have a smaller array too
+
+
+// * Splice is a bit different.  Splice lets us remove entries, but also lets us add replacements
+// * Splice has a direct effect on the original array
+// * array.splice(start, numEntriesToRemove,[entries to add]);
+// * I would like mealworms to be in place of alligator.  Alligator is in the #2 slot
+animals.splice(2,1,"mealworms");
+console.log(animals);  // * now alligator is gone, and mealworms is in its place
+
+// * We have not yet covered map, filter, every, and some.  We will explore those in the next section
+// * where we look closely at objects, and how objects work with arrays.
+
+/** 
+ * * To see more info about array commands check out
  * * https://www.abhishekdeshmukh.com/blog/javascript-array-methods
  * * Do they seem a little similar to string functionality.....what are the chances ;)
  */
