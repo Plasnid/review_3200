@@ -20,3 +20,6 @@ console.log(typeof(flamingoesAreCanadian));
 let bestClassIsProgramming = true;
 console.log(bestClassIsProgramming);
 console.log(typeof(bestClassIsProgramming));
+
+// ! Booleans are great, but now that we also have strings and numbers,
+// ! it is time to get onto Arrays! 
