@@ -73,3 +73,8 @@ for(let i=profSocks.length-1;i>=0;i--){
  */
 
 profSocks.forEach(socks => console.log(`I am wearing ${socks} socks today!`));
+
+// * this is only the tip of the iceberg though!
+// * Check out this page for examples of some great built in array functionality!
+// * https://www.abhishekdeshmukh.com/blog/javascript-array-methods
+// * Do they seem a little similar to string functionality.....what are the chances ;)
