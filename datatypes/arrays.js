@@ -172,4 +172,6 @@ console.log(animals);  // * now alligator is gone, and mealworms is in its place
  * * To see more info about array commands check out
  * * https://www.abhishekdeshmukh.com/blog/javascript-array-methods
  * * Do they seem a little similar to string functionality.....what are the chances ;)
+ * 
+ * ! Now we move onto to objects.js
  */
