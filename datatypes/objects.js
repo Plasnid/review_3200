@@ -88,10 +88,66 @@ for(let property in sandwich){
 }
 
 //* but there is more, we can get just the keys with Object.keys(objectName)
+console.log("Keys:");
 console.log(Object.keys(sandwich));
 //* or just the values with Object.values(objectName);
+console.log("Values:");
 console.log(Object.values(sandwich));
 //* or all the entries with Object.entries(objectName);
+console.log("entries");
 console.log(Object.entries(sandwich));
+
+/** 
+ * ! Accessors: getters and setters in Objects
+ * * Just like in a bank account statement, there are things we want
+ * * the user to read, but not change directly, like account balances.
+ * 
+ * * Getters and setters give us a way to access values and make security checks
+ * * to ensure that whoever is changing those values, actually has the right to.
+ * 
+*/ 
+let bankInfo = {
+    firstName: "Bow",
+    lastName: "Joeman",
+    loggedIn: false,
+    account: 12456789,
+    accountBalance: 100,
+    // * this kind of looks like a function doesn't it?
+    get balance(){
+        if(this.loggedIn==true){
+            return this.accountBalance;
+        }else{
+            return "I don't think so bucko!"
+        }
+    },
+    // * this also looks very much like a function
+    set balance(updatedBalance){
+        if(this.loggedIn==true){
+            this.accountBalance = updatedBalance;
+        }
+    }
+}
+// * first lets call for our balance
+// * notice that loggedIn is set to true...what do we get?
+// * In the code below we access balance, which looks like it should be a function
+// * but where is the ()????  
+// * Getters are accessed like a value, not a function, so no ()
+console.log(bankInfo.balance);
+// ! try changing the value of loggedIn in the object to false...what happens?
+// * It doesn't give you access.  Getters and setters act like values but let you
+// * take care of background processes(like security checks)
+
+// * lets have a look at the setter now!
+// * we can leave the loggedIn value at false for the moment
+bankInfo.balance = 100000000 // * I sure wish I could do this to my bank account!
+// * now lets change the value of loggedIn to true and see our amazing riches!
+bankInfo.loggedIn = true;
+console.log(bankInfo.balance); // ! except it didn't work, because we were not logged in. 
+// * We added a barrier to accessing or changing the value of accountBalance
+// * We gave accountBalance an alias(alternate name) of balance, and that let us control the flow of information
+// * Since we are logged in now, lets try changing the balance again
+// * Lets make ourselves pretend millionaires
+bankInfo.balance = 100000000;
+console.log(bankInfo.balance);  // * now I can pretend retire!
 
 // *lets have a little look at functions now!
