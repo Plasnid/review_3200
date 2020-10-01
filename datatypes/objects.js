@@ -150,5 +150,3 @@ console.log(bankInfo.balance); // ! except it didn't work, because we were not l
 // * Lets make ourselves pretend millionaires
 bankInfo.balance = 100000000;
 console.log(bankInfo.balance);  // * now I can pretend retire!
-
-// *lets have a little look at functions now!
