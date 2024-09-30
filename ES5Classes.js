@@ -19,6 +19,8 @@ function Snake(organismName, venomous){
     this.venomous = venomous;
 }
 Snake.prototype = Object.create(Organism.prototype);
+Snake.prototype.constructor = Snake;
+
 Snake.prototype.climbTrees = function(){
     console.log(`${this.organismName} really likes to climb trees`);
 }
@@ -32,6 +34,7 @@ function GilaMonster(organismName, venomous, numLegs){
     this.numLegs = numLegs;
 }
 GilaMonster.prototype = Object.create(Snake.prototype);
+GilaMonster.prototype.constructor = GilaMonster;
 
 let gill = new GilaMonster("Gill", true, 4);
 gill.greeting();
